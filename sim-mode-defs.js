@@ -1,12 +1,13 @@
 // ---- Simulation Modes ---- //
 
-const SIMULATION_MODES = ['Normal','Hyper','Wild','Megablobs','Experimental']; // Labels for sim mode selector UI
+const SIMULATION_MODES = ['Normal','Hyper','Wild','Megablobs','Experimental','Crazy]; // Labels for sim mode selector UI
 const SIM_MODE_NORMAL = 0;
 const SIM_MODE_HYPER = 1;
 const SIM_MODE_WILD = 2;
 const SIM_MODE_MEGABLOBS = 3;
 const SIM_MODE_EXPERIMENTAL = 4;
-
+const SIM_MODE_CRAZY = 5;
+                          
 // ---- Active Attributes ---- //
 
 // Active attributes are data of ActiveSystem not inherited from StormData; used for simulation of active storm systems
@@ -38,7 +39,8 @@ SPAWN_RULES[SIM_MODE_NORMAL] = {};
 SPAWN_RULES[SIM_MODE_HYPER] = {};
 SPAWN_RULES[SIM_MODE_WILD] = {};
 SPAWN_RULES[SIM_MODE_MEGABLOBS] = {};
-SPAWN_RULES[SIM_MODE_EXPERIMENTAL] = {};
+SPAWN_RULES[SIM_MODE_EXPERIMENTAL]
+SPAWN_RULES[SIM_MODE_CRAZY] = {};
 
 // -- Defaults -- //
 
@@ -161,6 +163,11 @@ SPAWN_RULES.defaults.archetypes = {
         inherit: 'tc',
         pressure: 690,
         windSpeed: 440
+    },
+    '~': {
+        inherit: 'tc',
+        pressure: 620,
+        windSpeed: 500
     }
 };
 
